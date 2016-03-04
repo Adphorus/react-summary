@@ -41,7 +41,7 @@ The `Summary` component expects the following props.
 | itemRenderer          | Identity (returns given parameter)            | A wrapper function for styling items |
 
 
-To styling items, you can provide react components instead of using itemRenderer.
+To styling items, you can provide react components in your collection instead of using itemRenderer.
 
 Translation strings:
 
