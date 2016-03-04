@@ -36,9 +36,12 @@ The `Summary` component expects the following props.
 | items            | []                             | The collection that will be aggregated |
 | max              | 3                              | Maximum visible item count |
 | text             | Object. Explained on the following table. | Translations of visible texts  |
-| preventSingleRemain | false                           | Prints the last item instead of `and 1 more` text |
-| onShowOthers          | No-op function            | Callback function for `show others` link  |
+| preventSingleRemaining | false                           | Prints the last item instead of `and 1 more` text |
+| onShowOthers          | No-op             | Callback function for `show others` link  |
+| itemRenderer          | Identity (returns given parameter)            | A wrapper function for styling items |
 
+
+To styling items, you can provide react components instead of using itemRenderer.
 
 Translation strings:
 

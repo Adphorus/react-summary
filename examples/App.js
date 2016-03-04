@@ -7,7 +7,8 @@ export default class App extends Component {
     return (
       <div>
       	<Summary items={['hey', 'foo', 'bar', 'selam']}
-               max={2}
+               max={3}
+               preventSingleRemaining={false}
                onShowOthers={this.showOthers} />
       </div>
     );

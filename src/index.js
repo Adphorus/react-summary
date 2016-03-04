@@ -10,8 +10,9 @@ class Summary extends Component {
       and: 'and',
       none: 'None'
     },
-    onShowOthers() {},
-    preventSingleRemain: false
+    onShowOthers: () => {},
+    itemRenderer: (item) => item,
+    preventSingleRemaining: false
   };
 
   handleShowOthers(event) {
@@ -22,17 +23,18 @@ class Summary extends Component {
 
   renderItems() {
     let {items, text, max,
-         preventSingleRemain} = this.props;
+         itemRenderer,
+         preventSingleRemaining} = this.props;
     switch (items.length) {
       case 0:
-        return text.none;
+        return itemRenderer(text.none);
 
       case 1:
-        return items[0];
+        return itemRenderer(items[0]);
 
       case 2:
       case max:
-      case preventSingleRemain && max + 1:
+      case preventSingleRemaining && max + 1:
 
         return (
           <div>
@@ -40,7 +42,7 @@ class Summary extends Component {
               i < items.length - 1 ? (
                 <span key={i}>
                   {i > 0 ? ', ' : null}
-                  {item}
+                  {itemRenderer(item)}
                 </span>
               ) : null
             ))} and {items[items.length - 1]}
@@ -53,7 +55,7 @@ class Summary extends Component {
             {items.map((item, i) => (
               <span key={i}>
                  {i > 0 && i < max ? ', ': null}
-                 {i < max ? item : null}
+                 {i < max ? itemRenderer(item) : null}
                  {i === max && (
                     <span>
                       {' '} {text.and} {' '}
