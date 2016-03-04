@@ -16,11 +16,14 @@ class App() {
   render() {
     return (
       <Summary items={['hey', 'foo', 'bar', 'selam']}
+               max={2}
                onShowOthers={this.showOthers} />
     )
   }
 }
 ```
+
+![Screenshot](http://i.imgur.com/TCaINON.png 'Screenshot')
 
 ### Configuration
 
@@ -28,11 +31,11 @@ The `Summary` component expects the following props.
 
 | Parameter        | Default                        |        |
 | :-------------   |:-------------------------------| :-----  |
-| items            | []                             | Collection that will be aggregated |
-| max              | 3                              | Maximum visible item  |
+| items            | []                             | The collection that will be aggregated |
+| max              | 3                              | Maximum visible item count |
 | text             | Object. Explained on the following table. | Translations of visible texts  |
-| preventSingleRemain | false                           | Prevents `and 1 more` text |
-| onShowOthers          | No-op function            | Callback for `show others` link  |
+| preventSingleRemain | false                           | Prints the last item instead of `and 1 more` text |
+| onShowOthers          | No-op function            | Callback function for `show others` link  |
 
 
 Translation strings:
