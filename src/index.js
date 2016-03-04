@@ -69,13 +69,13 @@ class Summary extends Component {
     }
   }
 
-	render() {
+  render() {
     return (
       <div className={this.block}>
         {this.renderItems()}
       </div>
     );
-	}
+  }
 }
 
 export default Summary;
