@@ -55,4 +55,4 @@ Translation strings:
 ### Contributors (You can add your name here in your pull-request)
 
 - Fatih Erikli <fatiherikli@gmail.com>
-
+- Burak Can <neoberg@gmail.com>
