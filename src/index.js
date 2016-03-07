@@ -27,7 +27,7 @@ class Summary extends Component {
          preventSingleRemaining} = this.props;
     switch (items.length) {
       case 0:
-        return itemRenderer(text.none);
+        return text.none;
 
       case 1:
         return itemRenderer(items[0]);
@@ -45,7 +45,7 @@ class Summary extends Component {
                   {itemRenderer(item)}
                 </span>
               ) : null
-            ))} and {items[items.length - 1]}
+            ))} and {itemRenderer(items[items.length - 1])}
           </div>
         );
 
