@@ -8,11 +8,12 @@ class Summary extends Component {
     text: {
       more: 'more',
       and: 'and',
-      none: 'None'
+      none: 'None',
+      comma: ', '
     },
     onShowOthers: () => {},
     itemRenderer: (item) => item,
-    preventSingleRemaining: false
+    preventSingleRemaining: false,
   };
 
   handleShowOthers(event) {
@@ -41,7 +42,7 @@ class Summary extends Component {
             {items.map((item, i) => (
               i < items.length - 1 ? (
                 <span key={i}>
-                  {i > 0 ? ', ' : null}
+                  {i > 0 ? text.comma : null}
                   {itemRenderer(item)}
                 </span>
               ) : null
@@ -54,7 +55,7 @@ class Summary extends Component {
           <div>
             {items.map((item, i) => (
               <span key={i}>
-                 {i > 0 && i < max ? ', ': null}
+                 {i > 0 && i < max ? text.comma: null}
                  {i < max ? itemRenderer(item) : null}
                  {i === max && (
                     <span>
