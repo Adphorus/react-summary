@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class Summary extends Component {
-  static block = "react-summary";
   static defaultProps = {
+    block: 'react-summary',
     items: [],
     max: 3,
     text: {
@@ -72,8 +72,9 @@ class Summary extends Component {
   }
 
   render() {
+    let {block} = this.props;
     return (
-      <div className={this.block}>
+      <div className={block}>
         {this.renderItems()}
       </div>
     );

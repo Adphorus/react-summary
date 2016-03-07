@@ -39,6 +39,7 @@ The `Summary` component expects the following props.
 | preventSingleRemaining | false                           | Prints the last item instead of `and 1 more` text |
 | onShowOthers          | No-op             | Callback function for `show others` link  |
 | itemRenderer          | Identity (returns given parameter)            | A wrapper function for styling items |
+| block             | react-summary | The className attribute of component  |
 
 
 To styling items, you can provide react components in your collection instead of using itemRenderer.
